@@ -1,0 +1,2 @@
+# PruebaRepoVite4openshift
+ 
