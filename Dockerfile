@@ -24,7 +24,7 @@ USER root
 RUN chown -R 1001:0 /opt/app-root/src
 
 # Restore default user privileges
-USER root
+
 
 # Run application in 'development' mode
 ENV NODE_ENV development
@@ -35,5 +35,6 @@ ENV PORT 8080
 # Container exposes port 3000
 EXPOSE 8080
 
+USER 1001
 # Start node process
 CMD ["npm", "run", "dev"]
