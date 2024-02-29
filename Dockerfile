@@ -22,6 +22,8 @@ RUN npm run build
 # Elevate privileges to change owner of source files
 USER root
 RUN chown -R 1001:0 /opt/app-root/src
+RUN chgrp -R 0 /some/directory && \
+    chmod -R g=u /some/directory 
 
 # Restore default user privileges
 
