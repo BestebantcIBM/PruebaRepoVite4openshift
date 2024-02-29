@@ -22,8 +22,8 @@ RUN npm run build
 # Elevate privileges to change owner of source files
 USER root
 RUN chown -R 1001:0 /opt/app-root/src
-RUN chgrp -R 0 /some/directory && \
-    chmod -R g=u /some/directory 
+RUN chgrp -R 0 /opt/app-root/src/node_modules/.vite/ && \
+    chmod -R g=u /opt/app-root/src/node_modules/.vite/
 
 # Restore default user privileges
 
