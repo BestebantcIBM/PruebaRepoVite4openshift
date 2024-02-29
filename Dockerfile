@@ -30,10 +30,10 @@ USER 1001
 ENV NODE_ENV development
 
 # Listen on port 3000
-ENV PORT 3000
+ENV PORT 8080
 
 # Container exposes port 3000
-EXPOSE 3000
+EXPOSE 8080
 
 # Start node process
 CMD ["npm", "run", "dev"]
